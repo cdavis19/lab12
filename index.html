@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>lab12</title>
+
+
+    <link href="styles.css" type="text/css" rel="stylesheet">
+
+</head>
+
+
+
+
+<body ng-app="myModule">
+
+    <h1>To-Do List</h1>
+
+
+
+    <div class"container">
+
+
+
+
+    <div ng-controller="myController">
+
+      <div class="first">
+
+
+
+        <label>
+           <input type= "text" ng-model="myModule"/>
+         </label>
+
+
+
+
+
+        <ul>
+            <li ng-repeat="list in lists | filter: myModule">{{list}}</li>
+        </ul>
+
+
+
+        <label>
+         <input type= "text" ng-model="item"/>
+         <input type="submit" value="Add" ng-click="add()">
+       </label>
+        <button data-ng-click="removeItem($index)">Remove</button>
+    </div>
+
+</div>
+
+
+</div>
+
+
+
+
+
+    <script src="angular.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
+</body>
+
+</html>
